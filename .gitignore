@@ -12,3 +12,4 @@ data_*/
 
 # Custom ignors
 .vs/
+.import
