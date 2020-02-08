@@ -10,5 +10,6 @@ export_presets.cfg
 .mono/
 data_*/
 
-# Custom ignors
+# Custom ignores
 .vs/
+*.import
