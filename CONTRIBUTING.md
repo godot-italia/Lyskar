@@ -10,9 +10,8 @@ entrare in contatto con la community tramite i seguenti canali:
 Una volta dentro puoi subito far parte del team di sviluppo, saperne di più, proporre nuove idee e offrire il tuo lavoro.
 
 Se vuoi programmare o comunque apportare delle modifiche a questa repository, ci sono 2 modi.
-
-- 1. Come prima, entra a far parte della community e del team. Diventerai membro dell'organizzazione su GitHub per avere accesso alla repository. In questo modo potrai aggiungere modifiche alla repository, attraverso branches (modifiche dirette al master sono bloccate in ogni caso).
-- 2. Fai una fork di questa repository, aggiungi le tue modifiche e crea una pull request.
+  1. Come prima, entra a far parte della community e del team. Diventerai membro dell'organizzazione su GitHub per avere accesso alla repository. In questo modo potrai aggiungere modifiche alla repository, attraverso branches (modifiche dirette al master sono bloccate in ogni caso).
+  2. Fai una fork di questa repository, aggiungi le tue modifiche e crea una pull request.
 
 Sono benvolute qualsiasi modifiche che aiuti il progetto, anche aggiustare una virgola in questo file
 è una pull request ben accetta. Anche se credi di avere poco da offrire, puoi comunque trovare
