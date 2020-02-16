@@ -19,12 +19,7 @@ qualcosa da fare con una community molto motivata.
 
 ## Linee guida programmazione
 
-Il gioco è programmato in gdscript e lo stile del codice da seguire (code conventions, naming conventions, whatever conventions) è quello proposto dal team di Godot stesso: [GDScript style guide](https://docs.godotengine.org/en/3.2/getting_started/scripting/gdscript/gdscript_styleguide.html).
-
-Inoltre è richiesta la [tipizzazione](https://docs.godotengine.org/en/3.2/getting_started/scripting/gdscript/gdscript_styleguide.html#static-typing), e i signals vanno utilizzati esclusivamente via
-codice e non editor. Connettendo signals a metodi tramite l'editor rende complicato agli altri
-membri di sapere se esistono o cosa stanno facendo signal da te creati. Tramite codice invece è
-esplicito.
+Il gioco è programmato in GDScript e lo stile del codice da seguire (code conventions, naming conventions, whatever conventions) è quello proposto dal team di Godot stesso: [GDScript style guide](https://docs.godotengine.org/en/3.2/getting_started/scripting/gdscript/gdscript_styleguide.html). In più è richiesta la [tipizzazione](https://docs.godotengine.org/en/3.2/getting_started/scripting/gdscript/gdscript_styleguide.html#static-typing).
 
 Quando una pull request viene creata per integrare nuovo codice, prima di accettare il merge essa 
 deve passare almeno 1 review da parte di un altro membro. L'adesione alle linee guida è un fattore importante per avere una pull request accettata.
