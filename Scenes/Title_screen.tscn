@@ -56,29 +56,29 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="image" type="Sprite" parent="."]
+z_index = -1
+texture = ExtResource( 1 )
+centered = false
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 follow_viewport_enable = true
-
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-mouse_filter = 2
-color = Color( 0, 0, 0, 0.1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="animations" type="AnimationPlayer" parent="CanvasLayer"]
 anims/fade_in = SubResource( 1 )
 anims/fade_out = SubResource( 2 )
 
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Commands" type="CanvasLayer" parent="."]
 layer = 0
-
-[node name="image" type="Sprite" parent="Commands"]
-z_index = -1
-texture = ExtResource( 1 )
-centered = false
 
 [node name="c_hover" type="Sprite" parent="Commands"]
 visible = false
