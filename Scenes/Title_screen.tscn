@@ -1,0 +1,153 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Sprites/title_screen_example.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Title_screen.gd" type="Script" id=2]
+[ext_resource path="res://Fonts/ts_font.tres" type="DynamicFont" id=3]
+[ext_resource path="res://BGM/title_screen_ph.ogg" type="AudioStream" id=4]
+[ext_resource path="res://Sprites/hover.png" type="Texture" id=5]
+
+[sub_resource type="Animation" id=1]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/path = NodePath("CanvasLayer/image:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ) ]
+}
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="StyleBoxEmpty" id=5]
+
+[sub_resource type="StyleBoxEmpty" id=8]
+
+[sub_resource type="StyleBoxEmpty" id=7]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=6]
+
+[node name="Title_screen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_enable = true
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 0.1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="animations" type="AnimationPlayer" parent="CanvasLayer"]
+anims/fade_in = SubResource( 1 )
+anims/fade_out = SubResource( 2 )
+
+[node name="Commands" type="CanvasLayer" parent="."]
+layer = 0
+
+[node name="image" type="Sprite" parent="Commands"]
+z_index = -1
+texture = ExtResource( 1 )
+centered = false
+
+[node name="c_hover" type="Sprite" parent="Commands"]
+visible = false
+position = Vector2( 237.655, 321.35 )
+scale = Vector2( 0.516732, 0.632553 )
+texture = ExtResource( 5 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Commands"]
+margin_left = 78.0
+margin_top = 293.0
+margin_right = 381.0
+margin_bottom = 521.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="New_Game" type="Button" parent="Commands/VBoxContainer"]
+margin_right = 303.0
+margin_bottom = 54.0
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/focus = SubResource( 8 )
+custom_styles/disabled = SubResource( 7 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = ExtResource( 3 )
+text = "New game"
+align = 0
+
+[node name="Continue" type="Button" parent="Commands/VBoxContainer"]
+margin_top = 58.0
+margin_right = 303.0
+margin_bottom = 112.0
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/focus = SubResource( 6 )
+custom_styles/disabled = SubResource( 7 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = ExtResource( 3 )
+text = "Continue"
+align = 0
+
+[node name="Options" type="Button" parent="Commands/VBoxContainer"]
+margin_top = 116.0
+margin_right = 303.0
+margin_bottom = 170.0
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/focus = SubResource( 6 )
+custom_styles/disabled = SubResource( 7 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = ExtResource( 3 )
+text = "Options"
+align = 0
+
+[node name="Exit" type="Button" parent="Commands/VBoxContainer"]
+margin_top = 174.0
+margin_right = 303.0
+margin_bottom = 228.0
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/focus = SubResource( 6 )
+custom_styles/disabled = SubResource( 7 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = ExtResource( 3 )
+text = "Exit"
+align = 0
+
+[node name="bgm" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="sfx" type="AudioStreamPlayer" parent="."]
+[connection signal="animation_finished" from="CanvasLayer/animations" to="." method="_on_animations_animation_finished"]
