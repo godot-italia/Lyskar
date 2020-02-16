@@ -1,0 +1,65 @@
+[gd_scene format=2]
+
+[node name="OptionsMenu" type="CanvasLayer"]
+layer = 2
+
+[node name="OptionsMenuPanel" type="Panel" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -640.0
+margin_top = -360.0
+margin_right = 640.0
+margin_bottom = 360.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="OptionsMenuPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -0.427185
+margin_top = 0.56958
+margin_right = -0.427246
+margin_bottom = 0.56958
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="OptionsMenuPanel/CenterContainer"]
+margin_left = 601.0
+margin_top = 310.0
+margin_right = 678.0
+margin_bottom = 410.0
+
+[node name="AudioOptionsButton" type="Button" parent="OptionsMenuPanel/CenterContainer/VBoxContainer"]
+margin_right = 77.0
+margin_bottom = 20.0
+text = "AUDIO"
+
+[node name="GraphicsOptionsButton" type="Button" parent="OptionsMenuPanel/CenterContainer/VBoxContainer"]
+margin_top = 24.0
+margin_right = 77.0
+margin_bottom = 44.0
+text = "GRAPHICS"
+
+[node name="GameOptionsButton" type="Button" parent="OptionsMenuPanel/CenterContainer/VBoxContainer"]
+margin_top = 48.0
+margin_right = 77.0
+margin_bottom = 68.0
+text = "GAME"
+
+[node name="HSeparator" type="HSeparator" parent="OptionsMenuPanel/CenterContainer/VBoxContainer"]
+margin_top = 72.0
+margin_right = 77.0
+margin_bottom = 76.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackButton" type="Button" parent="OptionsMenuPanel/CenterContainer/VBoxContainer"]
+margin_top = 80.0
+margin_right = 77.0
+margin_bottom = 100.0
+text = "BACK"
