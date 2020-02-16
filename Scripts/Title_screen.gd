@@ -21,6 +21,7 @@ func _ready():
 	for node in ts_commands.get_children():
 		if node is Button:
 			node.connect("mouse_entered",self,"set_cursor",[node.get_index()])
+			node.connect("button_up",self,"execute_command",[node.get_index()])
 			buttons.append(node)
 	pass 
 
@@ -69,6 +70,7 @@ func set_cursor(new_index : int):
 				ts_sfx.play()
 			index = new_index
 			var selected_command = buttons[index]
+			selected_command.grab_focus()
 			var c_new_position = Vector2(
 				selected_command.rect_global_position.x - 25,
 				selected_command.rect_global_position.y + 25
@@ -86,6 +88,14 @@ func set_cursor(new_index : int):
 			Tween.TRANS_LINEAR,Tween.EASE_IN)
 			cursor.tween.start()
 	pass
+
+
+func execute_command(index : int):
+	var selected_button = buttons[index]
+	if selected_button.has_method("start_action"):
+		selected_button.start_action()
+	pass
+
 
 func _process(delta):
 	if ts_is_active:
