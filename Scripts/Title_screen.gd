@@ -38,6 +38,9 @@ func create_cursor():
 	Color(1,1,1,1),0.2,Tween.TRANS_CUBIC,Tween.EASE_IN)
 	c_tween.start()
 	ts_canvas_com.add_child(cursor)
+	cursor.tween.interpolate_property(cursor, "modulate", Color(0,0,0,0),
+	Color(1,1,1,1),0.2,Tween.TRANS_CUBIC,Tween.EASE_IN)
+	cursor.tween.start()
 	set_cursor(0)
 	pass
 
@@ -66,14 +69,22 @@ func set_cursor(new_index : int):
 				ts_sfx.play()
 			index = new_index
 			var selected_command = buttons[index]
-			c_hover_node.global_position = Vector2(
-				selected_command.rect_global_position.x + 160,
-				selected_command.rect_global_position.y + 28
-			)
-			cursor.rect_global_position = Vector2(
+			var c_new_position = Vector2(
 				selected_command.rect_global_position.x - 25,
 				selected_command.rect_global_position.y + 25
 			)
+			var ch_new_position = Vector2(
+				selected_command.rect_global_position.x + 160,
+				selected_command.rect_global_position.y + 28
+			)
+			c_tween.interpolate_property(c_hover_node,
+			"global_position",c_hover_node.get_global_position(),
+			ch_new_position,0.1,Tween.TRANS_LINEAR,Tween.EASE_IN)
+			c_tween.start()
+			cursor.tween.interpolate_property(cursor, "rect_global_position",
+			cursor.get_global_position(),c_new_position,0.1,
+			Tween.TRANS_LINEAR,Tween.EASE_IN)
+			cursor.tween.start()
 	pass
 
 func _process(delta):
