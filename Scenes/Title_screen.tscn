@@ -82,9 +82,12 @@ layer = 0
 
 [node name="c_hover" type="Sprite" parent="Commands"]
 visible = false
+modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 237.655, 321.35 )
 scale = Vector2( 0.516732, 0.632553 )
 texture = ExtResource( 5 )
+
+[node name="tween" type="Tween" parent="Commands/c_hover"]
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Commands"]
 margin_left = 78.0
