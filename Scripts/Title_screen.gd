@@ -19,6 +19,7 @@ func _ready():
 	ts_animations.play("fade_in")
 	for node in ts_commands.get_children():
 		if node is Button:
+			node.connect("mouse_entered",self,"set_cursor",[node.get_index()])
 			buttons.append(node)
 	pass 
 
@@ -42,7 +43,7 @@ func set_cursor(new_index : int):
 	if new_index >= 0 and new_index < len(labels):
 =======
 	if new_index >= 0 and new_index < len(buttons):
-		if Input.is_action_just_pressed("ui_up") or Input.is_action_just_pressed("ui_down"):
+		if new_index != index:
 			ts_sfx.stream = c_move_sfx
 			ts_sfx.stream.set("loop",false)
 			ts_sfx.play()
