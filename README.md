@@ -1,7 +1,7 @@
 # Lyskar
 Gioco open source della community italiana di Godot. [Sito web Godot Italia](https://godotengineitalia.com/).
 
-Open source Godot game from the Godot Italia community, [english version below](#english-readme).
+<!-- Open source Godot game from the Godot Italia community, [english version below](#english-readme). -->
 
 ## Il Gioco
 
@@ -15,7 +15,7 @@ con le proprie azioni.
 Il progetto è aperto a tutti e qualsiasi aiuto è il benvenuto.
 Se vuoi contribuire anche tu, inizia leggendo le linee guida che abbiamo scritto in [CONTRIBUTING.md](CONTRIBUTING.md).
 
-## English README
+<!-- ## English README
 
-TODO
+TODO -->
 
