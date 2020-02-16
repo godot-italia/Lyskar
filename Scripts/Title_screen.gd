@@ -44,6 +44,7 @@ func set_cursor(new_index : int):
 	if new_index >= 0 and new_index < len(buttons):
 		if Input.is_action_just_pressed("ui_up") or Input.is_action_just_pressed("ui_down"):
 			ts_sfx.stream = c_move_sfx
+			ts_sfx.stream.set("loop",false)
 			ts_sfx.play()
 >>>>>>> c4df3b4... Changes in The title screen script
 		index = new_index
