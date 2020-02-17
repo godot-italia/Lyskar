@@ -28,7 +28,6 @@ func _ready():
 
 func _on_animations_animation_finished(anim_name):
 	if anim_name == "fade_in":
-		ts_is_active = true
 		create_cursor()
 	pass # Replace with function body.
 
@@ -38,10 +37,13 @@ func create_cursor():
 	c_tween.interpolate_property(c_hover_node, "modulate", Color(0,0,0,0),
 	Color(1,1,1,1),0.2,Tween.TRANS_CUBIC,Tween.EASE_IN)
 	c_tween.start()
+	cursor.rect_global_position = Vector2(-40,315)
 	ts_canvas_com.add_child(cursor)
 	cursor.tween.interpolate_property(cursor, "modulate", Color(0,0,0,0),
 	Color(1,1,1,1),0.2,Tween.TRANS_CUBIC,Tween.EASE_IN)
 	cursor.tween.start()
+	yield(cursor.tween,"tween_completed")
+	ts_is_active = true
 	set_cursor(0)
 	pass
 
