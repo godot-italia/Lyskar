@@ -15,4 +15,7 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 
 ## Lyskar Assets
 
-All game assets, except described below, were created during Lyskar development (see "Credits" menu in-game for full list of authors) and were released under "Creative Commons Attribution-NonCommercial-ShareAlike 4.0" (see ./licenses/CC-BY-SA-4.0.txt or <https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode>)
+All game assets, except described below, were created during Lyskar development 
+(see "Credits" menu in-game for full list of authors) and were released under 
+"Creative Commons Attribution-NonCommercial-ShareAlike 4.0" 
+(see ./licenses/CC-BY-NC-SA-4.0.txt or <https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode>)
