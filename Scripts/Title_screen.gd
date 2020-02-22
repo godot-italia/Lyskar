@@ -8,7 +8,7 @@ onready var c_hover_node : Sprite = $Commands/c_hover
 onready var ts_bgm : AudioStreamPlayer = $bgm
 onready var ts_sfx : AudioStreamPlayer = $sfx
 onready var c_tween : Tween = $Commands/c_hover/tween
-var c_move_sfx : Resource = preload("res://SFX/cursor_move.ogg")
+var c_move_sfx : Resource = preload("res://SFX/switch15.wav")
 var ts_is_active : bool = false
 var buttons : Array = []
 var cursor_scene = preload("res://Scenes/Cursor.tscn")
@@ -16,6 +16,7 @@ var cursor = cursor_scene.instance()
 var index = 0
 
 func _ready():
+	ts_bgm.play()
 	ts_color_rect.color = Color(0,0,0,1)
 	ts_animations.play("fade_in")
 	for node in ts_commands.get_children():
@@ -49,21 +50,6 @@ func create_cursor():
 
 
 func set_cursor(new_index : int):
-	if new_index >= 0 and new_index < len(buttons):
-		if new_index != index:
-			ts_sfx.stream = c_move_sfx
-			ts_sfx.stream.set("loop",false)
-			ts_sfx.play()
-		index = new_index
-		var selected_command = buttons[index]
-		c_hover_node.global_position = Vector2(
-			selected_command.rect_global_position.x + 160,
-			selected_command.rect_global_position.y + 28
-		)
-		cursor.rect_global_position = Vector2(
-			selected_command.rect_global_position.x - 25,
-			selected_command.rect_global_position.y + 25
-		)
 	if ts_is_active:
 		if new_index >= 0 and new_index < len(buttons):
 			if new_index != index:

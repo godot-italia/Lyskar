@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/switch15.wav-45a2362ff038ea3ed85eabccbef7c7bb.sample"
+
+[deps]
+
+source_file="res://SFX/switch15.wav"
+dest_files=[ "res://.import/switch15.wav-45a2362ff038ea3ed85eabccbef7c7bb.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

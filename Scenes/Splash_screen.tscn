@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Sprites/splash_screen.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Splash_Screen.gd" type="Script" id=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/path = NodePath("image:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "fade_out"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("image:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ) ]
+}
+
+[node name="Splash_screen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="image" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+centered = false
+
+[node name="time" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="animations" type="AnimationPlayer" parent="."]
+anims/fade_in = SubResource( 1 )
+anims/fade_out = SubResource( 2 )
+[connection signal="timeout" from="time" to="." method="_on_time_timeout"]
+[connection signal="animation_finished" from="animations" to="." method="_on_animations_animation_finished"]
