@@ -11,9 +11,9 @@ onready var c_tween : Tween = $Commands/c_hover/tween
 var c_move_sfx : Resource = preload("res://Assets/Sounds/SFX/switch15.wav")
 var ts_is_active : bool = false
 var buttons : Array = []
-var cursor_scene = preload("res://Scenes/Cursor.tscn")
-var cursor = cursor_scene.instance()
-var index = 0
+var cursor_scene : PackedScene = preload("res://Scenes/Cursor.tscn")
+var cursor : Node = cursor_scene.instance()
+var index : int = 0
 
 func _ready():
 	ts_bgm.play()
@@ -25,13 +25,13 @@ func _ready():
 			node.connect("button_up",self,"execute_command",[node.get_index()])
 			buttons.append(node)
 
-func _on_animations_animation_finished(anim_name):
+func _on_animations_animation_finished(anim_name: String) -> void:
 	if anim_name == "fade_in":
 		create_cursor()
 	pass # Replace with function body.
 
 
-func create_cursor():
+func create_cursor() -> void:
 	c_hover_node.visible = true
 	c_tween.interpolate_property(c_hover_node, "modulate", Color(0,0,0,0),
 	Color(1,1,1,1),0.2,Tween.TRANS_CUBIC,Tween.EASE_IN)
@@ -45,7 +45,7 @@ func create_cursor():
 	ts_is_active = true
 	set_cursor(0)
 
-func set_cursor(new_index : int):
+func set_cursor(new_index : int) -> void:
 	if ts_is_active:
 		if new_index >= 0 and new_index < len(buttons):
 			if new_index != index:
@@ -72,7 +72,7 @@ func set_cursor(new_index : int):
 			Tween.TRANS_LINEAR,Tween.EASE_IN)
 			cursor.tween.start()
 
-func execute_command(index : int):
+func execute_command(index : int) -> void:
 	var selected_button = buttons[index]
 	if selected_button.has_method("start_action"):
 		selected_button.start_action()

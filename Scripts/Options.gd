@@ -1,4 +1,4 @@
 extends Button
 
-func start_action():
+func start_action() -> void:
 	print("Options")
