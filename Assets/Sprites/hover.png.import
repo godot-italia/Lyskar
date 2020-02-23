@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/godot_splashscreen.png-910e633db43de527967f511946ccf206.stex"
+path="res://.import/hover.png-c6d88e23fc6b79816a5ed44a78dfdc82.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/godot_splashscreen.png"
-dest_files=[ "res://.import/godot_splashscreen.png-910e633db43de527967f511946ccf206.stex" ]
+source_file="res://Assets/Sprites/hover.png"
+dest_files=[ "res://.import/hover.png-c6d88e23fc6b79816a5ed44a78dfdc82.stex" ]
 
 [params]
 

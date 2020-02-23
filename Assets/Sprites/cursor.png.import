@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hover.png-6f7f7ee90f2b18ab6302420ae7cb02da.stex"
+path="res://.import/cursor.png-6bd9cf283c867b09acb002785bba6eff.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/hover.png"
-dest_files=[ "res://.import/hover.png-6f7f7ee90f2b18ab6302420ae7cb02da.stex" ]
+source_file="res://Assets/Sprites/cursor.png"
+dest_files=[ "res://.import/cursor.png-6bd9cf283c867b09acb002785bba6eff.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

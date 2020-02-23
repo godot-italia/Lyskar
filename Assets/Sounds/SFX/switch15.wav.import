@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/switch15.wav-45a2362ff038ea3ed85eabccbef7c7bb.sample"
+path="res://.import/switch15.wav-e6b1e998c07470d32da1a4721eff6070.sample"
 
 [deps]
 
-source_file="res://SFX/switch15.wav"
-dest_files=[ "res://.import/switch15.wav-45a2362ff038ea3ed85eabccbef7c7bb.sample" ]
+source_file="res://Assets/Sounds/SFX/switch15.wav"
+dest_files=[ "res://.import/switch15.wav-e6b1e998c07470d32da1a4721eff6070.sample" ]
 
 [params]
 

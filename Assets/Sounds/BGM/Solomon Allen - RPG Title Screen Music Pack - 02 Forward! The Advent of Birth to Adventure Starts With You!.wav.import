@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Solomon Allen - RPG Title Screen Music Pack - 02 Forward! The Advent of Birth to Adventure Starts With You!.wav-ac9c1aadc32c04409e962461f9a39041.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/BGM/Solomon Allen - RPG Title Screen Music Pack - 02 Forward! The Advent of Birth to Adventure Starts With You!.wav"
+dest_files=[ "res://.import/Solomon Allen - RPG Title Screen Music Pack - 02 Forward! The Advent of Birth to Adventure Starts With You!.wav-ac9c1aadc32c04409e962461f9a39041.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
