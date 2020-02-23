@@ -24,8 +24,6 @@ func _ready():
 			node.connect("mouse_entered",self,"set_cursor",[node.get_index()])
 			node.connect("button_up",self,"execute_command",[node.get_index()])
 			buttons.append(node)
-	pass 
-
 
 func _on_animations_animation_finished(anim_name):
 	if anim_name == "fade_in":
@@ -46,8 +44,6 @@ func create_cursor():
 	yield(cursor.tween,"tween_completed")
 	ts_is_active = true
 	set_cursor(0)
-	pass
-
 
 func set_cursor(new_index : int):
 	if ts_is_active:
@@ -75,15 +71,11 @@ func set_cursor(new_index : int):
 			cursor.get_global_position(),c_new_position,0.1,
 			Tween.TRANS_LINEAR,Tween.EASE_IN)
 			cursor.tween.start()
-	pass
-
 
 func execute_command(index : int):
 	var selected_button = buttons[index]
 	if selected_button.has_method("start_action"):
 		selected_button.start_action()
-	pass
-
 
 func _process(delta):
 	if ts_is_active:
@@ -91,4 +83,3 @@ func _process(delta):
 			set_cursor(index - 1)
 		if Input.is_action_just_pressed("ui_down"):
 			set_cursor(index + 1)
-	pass

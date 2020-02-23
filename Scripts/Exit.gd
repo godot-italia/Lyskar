@@ -12,4 +12,3 @@ func start_action() -> void:
 	tween_bgm.start()
 	yield(ts_animations,"animation_finished")
 	get_tree().quit()
-	pass
