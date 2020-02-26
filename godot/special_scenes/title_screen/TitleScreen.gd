@@ -8,10 +8,10 @@ onready var c_hover_node : Sprite = $Commands/c_hover
 onready var ts_bgm : AudioStreamPlayer = $bgm
 onready var ts_sfx : AudioStreamPlayer = $sfx
 onready var c_tween : Tween = $Commands/c_hover/tween
-var c_move_sfx : Resource = preload("res://godot/assets/sounds/SFX/switch15.wav")
+var c_move_sfx : Resource = preload("res://assets/sounds/SFX/switch15.wav")
 var ts_is_active : bool = false
 var buttons : Array = []
-var cursor_scene : PackedScene = preload("res://godot/special_scenes/ui_elements/Cursor.tscn")
+var cursor_scene : PackedScene = preload("res://special_scenes/ui_elements/Cursor.tscn")
 var cursor : Node = cursor_scene.instance()
 var index : int = 0
 

@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/Solomon Allen - RPG Title Screen Music Pack - 02 Forward! The Advent of Birth to Adventure Starts With You!.wav-b33507142ce9580aa0bec68d4b71748b.sample"
+path="res://.import/Solomon Allen - RPG Title Screen Music Pack - 02 Forward! The Advent of Birth to Adventure Starts With You!.wav-24a4485e732455ae75a44dac4d33127c.sample"
 
 [deps]
 
-source_file="res://godot/assets/sounds/BGM/Solomon Allen - RPG Title Screen Music Pack - 02 Forward! The Advent of Birth to Adventure Starts With You!.wav"
-dest_files=[ "res://.import/Solomon Allen - RPG Title Screen Music Pack - 02 Forward! The Advent of Birth to Adventure Starts With You!.wav-b33507142ce9580aa0bec68d4b71748b.sample" ]
+source_file="res://assets/sounds/BGM/Solomon Allen - RPG Title Screen Music Pack - 02 Forward! The Advent of Birth to Adventure Starts With You!.wav"
+dest_files=[ "res://.import/Solomon Allen - RPG Title Screen Music Pack - 02 Forward! The Advent of Birth to Adventure Starts With You!.wav-24a4485e732455ae75a44dac4d33127c.sample" ]
 
 [params]
 
