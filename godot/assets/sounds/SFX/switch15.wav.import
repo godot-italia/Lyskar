@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/switch15.wav-e6b1e998c07470d32da1a4721eff6070.sample"
+path="res://.import/switch15.wav-7dd662bbd1a345f555723eeb79da5296.sample"
 
 [deps]
 
-source_file="res://Assets/Sounds/SFX/switch15.wav"
-dest_files=[ "res://.import/switch15.wav-e6b1e998c07470d32da1a4721eff6070.sample" ]
+source_file="res://godot/assets/sounds/SFX/switch15.wav"
+dest_files=[ "res://.import/switch15.wav-7dd662bbd1a345f555723eeb79da5296.sample" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/splash_screen.png-d6ea809b30537ba47a54eaa403ad3a9f.stex"
+path="res://.import/cursor.png-681be2902096b1022206c3528a8f174a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/splash_screen.png"
-dest_files=[ "res://.import/splash_screen.png-d6ea809b30537ba47a54eaa403ad3a9f.stex" ]
+source_file="res://godot/assets/sprites/cursor.png"
+dest_files=[ "res://.import/cursor.png-681be2902096b1022206c3528a8f174a.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

@@ -4,7 +4,7 @@ onready var sc_sprite : Sprite = $image
 onready var sc_animations : AnimationPlayer = $animations
 onready var sc_timer : Timer = $time
 var can_skip : bool = false
-var ts_scene : String = "res://Scenes/TitleScreen.tscn"
+var ts_scene : String = "res://godot/special_scenes/title_screen/TitleScreen.tscn"
 
 func _ready():
 	sc_sprite.modulate = Color(0,0,0,1)
