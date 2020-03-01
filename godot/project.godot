@@ -8,9 +8,14 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Node",
+"class": "Base_Actor",
+"language": "GDScript",
+"path": "res://special_scenes/base_class_test/Base_Actor.gd"
+} ]
 _global_script_class_icons={
-
+"Base_Actor": ""
 }
 
 [application]
