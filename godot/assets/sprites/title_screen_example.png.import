@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/title_screen_example.png-27f26e0bb07775ca8b1986f3a99a39db.stex"
+path="res://.import/title_screen_example.png-82b51151789322bb27eda1e42f1a0599.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://godot/assets/sprites/title_screen_example.png"
-dest_files=[ "res://.import/title_screen_example.png-27f26e0bb07775ca8b1986f3a99a39db.stex" ]
+source_file="res://assets/sprites/title_screen_example.png"
+dest_files=[ "res://.import/title_screen_example.png-82b51151789322bb27eda1e42f1a0599.stex" ]
 
 [params]
 
