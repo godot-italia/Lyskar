@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Scripts/ExitGameButton.gd" type="Script" id=2]
+[ext_resource path="res://godot/special_scenes/pause_menu/ExitGameButton.gd" type="Script" id=2]
 
 [sub_resource type="ShortCut" id=1]
 

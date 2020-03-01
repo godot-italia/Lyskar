@@ -58,7 +58,7 @@ margin_bottom = 76.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="BackButton" type="Button" parent="OptionsMenuPanel/CenterContainer/VBoxContainer"]
+[node name="BackFromOptionsButton" type="Button" parent="OptionsMenuPanel/CenterContainer/VBoxContainer"]
 margin_top = 80.0
 margin_right = 77.0
 margin_bottom = 100.0
