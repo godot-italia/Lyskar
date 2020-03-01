@@ -13,7 +13,7 @@ con le proprie azioni.
 ## Vuoi partecipare anche tu?
 
 Il progetto è aperto a tutti e qualsiasi aiuto è il benvenuto.
-Se vuoi contribuire anche tu, inizia leggendo le linee guida che abbiamo scritto in [CONTRIBUTING.md](CONTRIBUTING.md).
+Se vuoi contribuire anche tu, inizia leggendo le linee guida che abbiamo scritto in [CONTRIBUTING.md](docs/CONTRIBUTING.md).
 
 <!-- ## English README
 
