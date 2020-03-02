@@ -20,6 +20,16 @@ Il gestore di mappa crea tutti gli oggetti necessari per la fruibilità di ogni 
 gli NPC e li posiziona nei punti a loro assegnati. Il generatore di mappa si occupa anche di ricordarsi lo stato di ogni sezione di mappa: ad esempio se una determinata porta è stata sbloccata, se un gruppo di nemici o boss è stato abbattuto, ecc.
 
 ### Attori - Osorin e NPC
+Approccio top-down partendo dal documento della macchina a stati (vedi documento LibreOffice sulla repo Github), per un ambiente di gioco flessibile e per il caricamento in background che ci consente di ingrandire i livelli quanto vogliamo.
+
+Terminologia:
+    - Attore = qualunque classe caricata sul campo di gioco tale che sia interagibile. Esepmi: Osorin, Strega con pentolone, Troll, Bracere, Porta, ecc.
+    
+Abbozzo di interfaccia tra oggetti e macchina a stati
+Ogni attore eredita da una classe base che continene tutti i metodi e proprietà atti ad interagire con la macchina a stati che li coordina e inerfaccia gli uni con gli altri.
+Il movimento e il rilevamento di attori nelle vicinanze potrebbe essere implementato tranquillamente tramite le funzioni di libreria di Godot, nel qual caso dovremmo mettere questo codice nella classe base da cui gli attori ereditano.
+Ogni attore ha una sezione interna di intelligenza artificiale che detta le azioni che l'attore deve eseguire. Ad esempio, un troll vorrà tenere sotto controllo il proprio campo visivo per andare verso Osorin ogni qual volta lo rileva nelle vicinanze, ma non oltre l'area di appartenenza che gli è stato ordinato di non abbandonare. Un bracere avrà soltanto una funzione di intelligenza artificiale che determina se la carbonella è finita ed eventualmente spegne la fiamma.
+Osorin dal canto suo continene intelligenza artificiale fittizia che semplicemente riceve comandi dal giocatore e li implementa.
 
 ### Coordinatore Attori
 Il coordinatore degli attori è un motore generico a cui ogni oggetto generato si "registra" nel momento in cui viene creato. 
