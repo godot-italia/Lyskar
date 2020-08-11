@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/fonts/ts_font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://special_scenes/title_screen/Base_Button.gd" type="Script" id=2]
+
+[node name="Base_Button" type="TextureButton"]
+anchor_right = 0.375
+anchor_bottom = 0.107
+margin_right = -3.05176e-05
+margin_bottom = -0.200005
+rect_min_size = Vector2( 384, 64 )
+focus_mode = 1
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 1 )
+text = "text"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
