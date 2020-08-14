@@ -1,0 +1,46 @@
+[gd_scene format=2]
+
+[node name="GameOptions" type="CanvasLayer"]
+layer = 3
+
+[node name="GameOptionsPanel" type="Panel" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="GameOptionsPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameOptionsPanel/CenterContainer"]
+margin_left = 461.0
+margin_top = 272.0
+margin_right = 562.0
+margin_bottom = 328.0
+
+[node name="Label" type="Label" parent="GameOptionsPanel/CenterContainer/VBoxContainer"]
+margin_right = 101.0
+margin_bottom = 14.0
+text = "GAME OPTIONS"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GameOptionsPanel/CenterContainer/VBoxContainer"]
+margin_top = 18.0
+margin_right = 101.0
+margin_bottom = 32.0
+
+[node name="Label" type="Label" parent="GameOptionsPanel/CenterContainer/VBoxContainer/HBoxContainer"]
+margin_right = 64.0
+margin_bottom = 14.0
+text = "OPTION 1"
+
+[node name="BackFromGameOptionsButton" type="Button" parent="GameOptionsPanel/CenterContainer/VBoxContainer"]
+margin_top = 36.0
+margin_right = 101.0
+margin_bottom = 56.0
+text = "BACK"
