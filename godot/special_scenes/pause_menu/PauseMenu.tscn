@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://special_scenes/pause_menu/ExitGameButton.gd" type="Script" id=2]
+
+[sub_resource type="ShortCut" id=1]
+
+[node name="PauseMenu" type="CanvasLayer"]
+
+[node name="PauseMenuPanel" type="Panel" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -640.0
+margin_top = -360.0
+margin_right = 640.0
+margin_bottom = 360.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="PauseMenuPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseMenuPanel/CenterContainer"]
+margin_left = 604.0
+margin_top = 326.0
+margin_right = 675.0
+margin_bottom = 394.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ResumeButton" type="Button" parent="PauseMenuPanel/CenterContainer/VBoxContainer"]
+margin_right = 71.0
+margin_bottom = 20.0
+shortcut = SubResource( 1 )
+text = "RESUME"
+
+[node name="OptionsButton" type="Button" parent="PauseMenuPanel/CenterContainer/VBoxContainer"]
+margin_top = 24.0
+margin_right = 71.0
+margin_bottom = 44.0
+text = "OPTIONS"
+
+[node name="ExitGameButton" type="Button" parent="PauseMenuPanel/CenterContainer/VBoxContainer"]
+margin_top = 48.0
+margin_right = 71.0
+margin_bottom = 68.0
+text = "EXIT"
+script = ExtResource( 2 )
