@@ -20,7 +20,9 @@ tracks/0/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( -5, 0 ), Vector2( 0, 0 ) ]
 }
 
-[node name="Cursor" type="Control"]
+[node name="Cursor" type="Control" groups=[
+"Cursor",
+]]
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
