@@ -1,0 +1,104 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://res/VisualNovelEngine/Reader/Reader.gd" type="Script" id=1]
+
+[sub_resource type="StyleBoxFlat" id=1]
+content_margin_left = 10.0
+content_margin_right = 10.0
+content_margin_top = 7.0
+content_margin_bottom = 7.0
+bg_color = Color( 0, 0, 0, 0.588235 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.00784314, 0, 1, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+
+[sub_resource type="StyleBoxFlat" id=2]
+content_margin_left = 10.0
+content_margin_right = 10.0
+content_margin_top = 10.0
+content_margin_bottom = 10.0
+bg_color = Color( 0, 0, 0, 0.588235 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.00784314, 0, 1, 1 )
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="Reader" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Place" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+expand = true
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Sprite" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -114.0
+margin_top = -260.0
+margin_right = 114.0
+margin_bottom = -32.0
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Options" type="VBoxContainer" parent="."]
+anchor_left = 0.273438
+anchor_top = 0.413333
+anchor_right = 0.726563
+anchor_bottom = 0.586666
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Dialog" type="VBoxContainer" parent="."]
+anchor_left = 0.046875
+anchor_top = 0.64
+anchor_right = 0.953125
+anchor_bottom = 0.96
+custom_constants/separation = 0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Name" type="Label" parent="Dialog"]
+margin_right = 70.0
+margin_bottom = 28.0
+size_flags_horizontal = 2
+custom_styles/normal = SubResource( 1 )
+text = "@NAME"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Text" type="RichTextLabel" parent="Dialog"]
+margin_top = 28.0
+margin_right = 928.0
+margin_bottom = 192.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = SubResource( 2 )
+text = "SOME TEXT"
+__meta__ = {
+"_edit_use_anchors_": true
+}
