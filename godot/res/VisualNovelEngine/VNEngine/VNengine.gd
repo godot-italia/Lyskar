@@ -3,7 +3,7 @@ extends Reference
 class_name VNEngine
 
 const filepaths : String = "res://res/VisualNovelEngine/example/files/"
-const file_extension : String = ".dg"
+const file_extension : String = ".res"
 const file_delimiter : String = ";"
 
 """
@@ -79,7 +79,7 @@ A single line of dialog, contained in a Dictionary with some additional paramete
     -- additional parameters, identified by numbers, only present with a 'answer' type line of dialog, and each index respects the 'options' indexes
 """
 class DialogLine:
-    enum Types { SAY, ASK, ANSWER }
+    enum Types { SAY, ASK, ANSWER, ACTION }
     # the current line of dialog
     var current_dialog_line : Dictionary = {}
 
@@ -97,6 +97,11 @@ class DialogLine:
 
     func get_options() -> Array:
         return current_dialog_line.options
+
+    func get_action() -> String:
+        if current_dialog_line.has("action"):
+            return current_dialog_line.action
+        return "_"
 
     func get_answer(answer_index : int) -> DialogLine:
         return DialogLine.new(current_dialog_line.get(str(answer_index)))
