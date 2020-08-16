@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sad.png-948267e80f370ef21b0806e278680d91.stex"
+path="res://.import/sad.png-acb1dd39735e26382844b96d1cc1478b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://res/VisualNovelEngine/example/speaker_1/sad.png"
-dest_files=[ "res://.import/sad.png-948267e80f370ef21b0806e278680d91.stex" ]
+source_file="res://src/VisualNovelEngine/example/speaker_1/sad.png"
+dest_files=[ "res://.import/sad.png-acb1dd39735e26382844b96d1cc1478b.stex" ]
 
 [params]
 

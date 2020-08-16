@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/park_night.jpg-230efc815be9cd0f68e86042882a8a41.stex"
+path="res://.import/question.png-f02b7ed05e6631ddc334591882ff4365.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://res/VisualNovelEngine/example/places/park_night.jpg"
-dest_files=[ "res://.import/park_night.jpg-230efc815be9cd0f68e86042882a8a41.stex" ]
+source_file="res://src/VisualNovelEngine/example/speaker_1/question.png"
+dest_files=[ "res://.import/question.png-f02b7ed05e6631ddc334591882ff4365.stex" ]
 
 [params]
 

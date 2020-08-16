@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/funny.png-232a25d4bdd8f130ef50d84adb93600a.stex"
+path="res://.import/happy.png-75b775db95e00eda052a91a97fa552ab.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://res/VisualNovelEngine/example/speaker_1/funny.png"
-dest_files=[ "res://.import/funny.png-232a25d4bdd8f130ef50d84adb93600a.stex" ]
+source_file="res://src/VisualNovelEngine/example/speaker_1/happy.png"
+dest_files=[ "res://.import/happy.png-75b775db95e00eda052a91a97fa552ab.stex" ]
 
 [params]
 

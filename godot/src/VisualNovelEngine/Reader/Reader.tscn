@@ -1,11 +1,11 @@
 [gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://res/VisualNovelEngine/Reader/Reader.gd" type="Script" id=1]
-[ext_resource path="res://res/VisualNovelEngine/example/audio_samples/UI-Simple-Cancel.ogg" type="AudioStream" id=2]
-[ext_resource path="res://res/VisualNovelEngine/example/audio_samples/UI-Bell-1.ogg" type="AudioStream" id=3]
-[ext_resource path="res://res/VisualNovelEngine/example/audio_samples/UI-Bright.ogg" type="AudioStream" id=5]
+[ext_resource path="res://src/VisualNovelEngine/Reader/Reader.gd" type="Script" id=1]
+[ext_resource path="res://src/VisualNovelEngine/example/audio_samples/UI-Simple-Cancel.ogg" type="AudioStream" id=2]
+[ext_resource path="res://src/VisualNovelEngine/example/audio_samples/UI-Bell-1.ogg" type="AudioStream" id=3]
+[ext_resource path="res://src/VisualNovelEngine/example/audio_samples/UI-Bright.ogg" type="AudioStream" id=5]
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=1]
 resource_name = "_"
 length = 0.1
 tracks/0/type = "value"
@@ -45,7 +45,7 @@ tracks/2/keys = {
 "values": [ Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=2]
 resource_name = "answer_negative"
 length = 0.1
 tracks/0/type = "value"
@@ -109,7 +109,7 @@ tracks/4/keys = {
 "values": [ true, false ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=3]
 resource_name = "answer_positive"
 length = 0.1
 tracks/0/type = "value"
@@ -173,7 +173,7 @@ tracks/4/keys = {
 "values": [ true, false ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=4]
 resource_name = "back"
 length = 0.5
 tracks/0/type = "value"
@@ -213,8 +213,7 @@ tracks/2/keys = {
 "values": [ 0.0 ]
 }
 
-[sub_resource type="Animation" id=1]
-resource_name = "entrance"
+[sub_resource type="Animation" id=5]
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:rect_position")
@@ -253,8 +252,7 @@ tracks/2/keys = {
 "values": [ true, false ]
 }
 
-[sub_resource type="Animation" id=2]
-resource_name = "exit"
+[sub_resource type="Animation" id=6]
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:rect_position")
@@ -269,8 +267,7 @@ tracks/0/keys = {
 "values": [ Vector2( 400, 40 ), Vector2( -248, 40 ) ]
 }
 
-[sub_resource type="Animation" id=6]
-resource_name = "front"
+[sub_resource type="Animation" id=7]
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:modulate")
@@ -309,8 +306,7 @@ tracks/2/keys = {
 "values": [ 0.0 ]
 }
 
-[sub_resource type="Animation" id=7]
-resource_name = "tremble"
+[sub_resource type="Animation" id=8]
 length = 0.8
 loop = true
 tracks/0/type = "value"
@@ -326,7 +322,7 @@ tracks/0/keys = {
 "values": [ Vector2( 400, 40 ), Vector2( 384, 56 ), Vector2( 416, 24 ), Vector2( 472, 56 ), Vector2( 320, 16 ), Vector2( 424, -8 ), Vector2( 400, 40 ) ]
 }
 
-[sub_resource type="StyleBoxFlat" id=3]
+[sub_resource type="StyleBoxFlat" id=9]
 content_margin_left = 10.0
 content_margin_right = 10.0
 content_margin_top = 7.0
@@ -340,7 +336,7 @@ border_color = Color( 0.00784314, 0, 1, 1 )
 corner_radius_top_left = 5
 corner_radius_top_right = 5
 
-[sub_resource type="StyleBoxFlat" id=4]
+[sub_resource type="StyleBoxFlat" id=10]
 content_margin_left = 10.0
 content_margin_right = 10.0
 content_margin_top = 10.0
@@ -363,14 +359,14 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/_ = SubResource( 8 )
-anims/answer_negative = SubResource( 10 )
-anims/answer_positive = SubResource( 9 )
-anims/back = SubResource( 5 )
-anims/entrance = SubResource( 1 )
-anims/exit = SubResource( 2 )
-anims/front = SubResource( 6 )
-anims/tremble = SubResource( 7 )
+anims/_ = SubResource( 1 )
+anims/answer_negative = SubResource( 2 )
+anims/answer_positive = SubResource( 3 )
+anims/back = SubResource( 4 )
+anims/entrance = SubResource( 5 )
+anims/exit = SubResource( 6 )
+anims/front = SubResource( 7 )
+anims/tremble = SubResource( 8 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 5 )
@@ -422,7 +418,7 @@ __meta__ = {
 margin_right = 70.0
 margin_bottom = 28.0
 size_flags_horizontal = 2
-custom_styles/normal = SubResource( 3 )
+custom_styles/normal = SubResource( 9 )
 text = "@NAME"
 __meta__ = {
 "_edit_use_anchors_": true
@@ -434,7 +430,7 @@ margin_right = 928.0
 margin_bottom = 192.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_styles/normal = SubResource( 4 )
+custom_styles/normal = SubResource( 10 )
 text = "SOME TEXT"
 __meta__ = {
 "_edit_use_anchors_": true

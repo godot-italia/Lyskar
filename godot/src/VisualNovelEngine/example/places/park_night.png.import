@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/happy.png-e7b54e14f766daebc3cced0b48f8d407.stex"
+path="res://.import/park_night.png-9adc201a1bbdbf72c48210895d1a591d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://res/VisualNovelEngine/example/speaker_1/happy.png"
-dest_files=[ "res://.import/happy.png-e7b54e14f766daebc3cced0b48f8d407.stex" ]
+source_file="res://src/VisualNovelEngine/example/places/park_night.png"
+dest_files=[ "res://.import/park_night.png-9adc201a1bbdbf72c48210895d1a591d.stex" ]
 
 [params]
 

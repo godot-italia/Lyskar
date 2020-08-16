@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "Reference",
 "class": "VNEngine",
 "language": "GDScript",
-"path": "res://res/VisualNovelEngine/VNEngine/VNengine.gd"
+"path": "res://src/VisualNovelEngine/VNEngine/VNengine.gd"
 } ]
 _global_script_class_icons={
 "VNEngine": ""

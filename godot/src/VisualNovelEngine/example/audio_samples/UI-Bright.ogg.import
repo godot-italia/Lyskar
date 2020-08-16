@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/UI-Bright.ogg-250abead18bf4df14c413d8e19c2fe28.oggstr"
+
+[deps]
+
+source_file="res://src/VisualNovelEngine/example/audio_samples/UI-Bright.ogg"
+dest_files=[ "res://.import/UI-Bright.ogg-250abead18bf4df14c413d8e19c2fe28.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

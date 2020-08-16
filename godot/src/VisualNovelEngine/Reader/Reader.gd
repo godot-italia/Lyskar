@@ -27,8 +27,8 @@ func _ready():
 
 func show_dialog(dialog : VNEngine.Dialog):
     _dialog = dialog
-    _Name.set_text(_dialog.get_speaker())
-    _Place.set_texture(load("res://res/VisualNovelEngine/example/places/"+_dialog.get_where()+".jpg"))
+    _Name.set_text(_dialog.get_actor())
+    _Place.set_texture(load(dialog.get_place_file()))
     var first_line : VNEngine.DialogLine = _dialog.get_line()
     match_line(first_line)
 
@@ -52,9 +52,6 @@ func match_line(line : VNEngine.DialogLine):
     elif line.get_type() == VNEngine.DialogLine.Types.ASK:
         show_line(line)
         show_options(line.get_options())
-    elif line.get_type() == VNEngine.DialogLine.Types.ACTION:
-        hide_options()
-        show_line(line)
     animate(line.get_action())
 
 func animate(animation : String):
@@ -64,7 +61,7 @@ func show_line(line : VNEngine.DialogLine):
     _line = line
     _Text.clear()
     _Text.add_text(line.get_text())
-    _Sprite.texture = load("res://res/VisualNovelEngine/example/%s/%s.png" % [_dialog.get_speaker(),line.get_expression()])
+    _Sprite.texture = load(_line.get_actor_expression_file())
 
 func show_options(line_options : Array):
     for option in line_options:
@@ -84,6 +81,11 @@ func hide_options():
 
 func select_answer(option_button : Button):
     print("Selected answer: %s (index %s)"%[option_button.text, option_button.name])
+    VNEngine.DecisionFileWorker.save_decision(
+        _dialog,
+        _line,
+        int(option_button.name)
+       )
     _answer = int(option_button.name)
     show_next_line()
 
